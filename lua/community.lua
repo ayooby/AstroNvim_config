@@ -8,5 +8,10 @@ if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  -- import/override with your plugins folder
+  { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.colorscheme.neosolarized-nvim" },
+  { import = "astrocommunity.color.twilight-nvim" },
+  { import = "astrocommunity.color.transparent-nvim" },
+  { import = "astrocommunity.bars-and-lines.vim-illuminate" },
+  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" }
 }
