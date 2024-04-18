@@ -14,26 +14,33 @@ return {
     event = "BufRead",
     config = function() require("lsp_signature").setup() end,
   },
-
-  -- == Examples of Overriding Plugins ==
-
   -- customize alpha options
   {
     "goolord/alpha-nvim",
     opts = function(_, opts)
       -- customize the dashboard header
       opts.section.header.val = {
-        " █████  ███████ ████████ ██████   ██████",
-        "██   ██ ██         ██    ██   ██ ██    ██",
-        "███████ ███████    ██    ██████  ██    ██",
-        "██   ██      ██    ██    ██   ██ ██    ██",
-        "██   ██ ███████    ██    ██   ██  ██████",
-        " ",
-        "    ███    ██ ██    ██ ██ ███    ███",
-        "    ████   ██ ██    ██ ██ ████  ████",
-        "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-        "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-        "    ██   ████   ████   ██ ██      ██",
+        "            ███████╗     ██╗███╗   ██╗███████╗                ",
+        "            ██╔════╝     ██║████╗  ██║██╔════╝                ",
+        "            ███████╗     ██║██╔██╗ ██║█████╗                  ",
+        "            ╚════██║██   ██║██║╚██╗██║██╔══╝                  ",
+        "            ███████║╚█████╔╝██║ ╚████║██║                     ",
+        "            ╚══════╝ ╚════╝ ╚═╝  ╚═══╝╚═╝                     ",
+        "                                                              ",
+        "                        ██╗███████╗                           ",
+        "                        ██║██╔════╝                           ",
+        "                        ██║███████╗                           ",
+        "                        ██║╚════██║                           ",
+        "                        ██║███████║                           ",
+        "                        ╚═╝╚══════╝                           ",
+        "                                                              ",
+        " █████╗ ██╗    ██╗███████╗███████╗ ██████╗ ███╗   ███╗███████╗",
+        "██╔══██╗██║    ██║██╔════╝██╔════╝██╔═══██╗████╗ ████║██╔════╝",
+        "███████║██║ █╗ ██║█████╗  ███████╗██║   ██║██╔████╔██║█████╗  ",
+        "██╔══██║██║███╗██║██╔══╝  ╚════██║██║   ██║██║╚██╔╝██║██╔══╝  ",
+        "██║  ██║╚███╔███╔╝███████╗███████║╚██████╔╝██║ ╚═╝ ██║███████╗",
+        "╚═╝  ╚═╝ ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝",
+
       }
       return opts
     end,
@@ -82,4 +89,44 @@ return {
       )
     end,
   },
+
+  -- CUSTOM PLUGINGS
+      { "github/copilot.vim" },
+    {
+      "zbirenbaum/copilot.lua",
+      cmd = "Copilot",
+      event = "InsertEnter",
+      config = function()
+        require("copilot").setup({
+          panel = {
+            auto_refresh = true,
+          },
+          suggestion = {
+            auto_trigger = true
+          }
+        })
+      end,
+    },
+    {
+      "zbirenbaum/copilot-cmp",
+      config = function()
+        require("copilot_cmp").setup()
+      end
+    },
+    {
+      "kylechui/nvim-surround",
+      version = "*", -- Use for stability; omit to use `main` branch for the latest features
+      event = "VeryLazy",
+      config = function()
+        require("nvim-surround").setup({
+        })
+      end
+    },
+    {
+    "wakatime/vim-wakatime",
+      lazy = false,
+      config = function()
+      end
+    },
+
 }
