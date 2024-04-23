@@ -1,0 +1,26 @@
+{
+  "name": "user_snippets",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "javascript",
+          "typescript",
+          "vue"
+        ],
+        "path": "./console.json"
+      },
+      {
+        "language": [
+          "javascript",
+          "typescript",
+          "vue"
+        ],
+        "path": "./debugger-js.json"
+      }
+    ]
+  }
+}

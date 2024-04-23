@@ -1,0 +1,12 @@
+{
+  "setup": {
+    "prefix": [
+      "d",
+      "debug"
+    ],
+    "body": [
+      "debug('======= %O', $1)"
+    ],
+    "description": "My custom debug"
+  }
+}

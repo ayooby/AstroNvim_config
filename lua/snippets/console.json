@@ -1,0 +1,12 @@
+{
+  "setup": {
+    "prefix": [
+      "ll",
+      "log"
+    ],
+    "body": [
+      "console.log('======= $1', $2)"
+    ],
+    "description": "My custom console log"
+  }
+}
