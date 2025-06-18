@@ -2,7 +2,7 @@ return {
   "AstroNvim/astroui",
   opts = {
     -- change colorscheme
-    colorscheme = "catppuccin",
+    colorscheme = "bamboo",
     background_colour = "#000000",
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     icons = {

@@ -55,25 +55,25 @@ return {
 
   -- CUSTOM PLUGINGS
   { "github/copilot.vim" },
-  {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter",
-    config = function()
-      require("copilot").setup {
-        panel = {
-          auto_refresh = true,
-        },
-        suggestion = {
-          auto_trigger = true,
-        },
-      }
-    end,
-  },
-  {
-    "zbirenbaum/copilot-cmp",
-    config = function() require("copilot_cmp").setup() end,
-  },
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   cmd = "Copilot",
+  --   event = "InsertEnter",
+  --   config = function()
+  --     require("copilot").setup {
+  --       panel = {
+  --         auto_refresh = true,
+  --       },
+  --       suggestion = {
+  --         auto_trigger = true,
+  --       },
+  --     }
+  --   end,
+  -- },
+  -- {
+  --   "zbirenbaum/copilot-cmp",
+  --   config = function() require("copilot_cmp").setup() end,
+  -- },
   {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -85,4 +85,5 @@ return {
     lazy = false,
     config = function() end,
   },
+  { "machakann/vim-swap" },
 }
